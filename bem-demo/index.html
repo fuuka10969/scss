@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BEM</title>
+
+  <link rel="stylesheet" href="./style/common/animation.scss" />
+  <link rel="stylesheet" href="./style/ui/icon.scss" />
+  <link rel="stylesheet" href="./style/ui/button.scss" />
+  <link rel="stylesheet" href="./style/ui/cell.scss" />
+
+  <link rel="stylesheet" href="./style/pages/index.scss" />
+</head>
+
+<body>
+  <div class="demo-nlock">
+    <h2>Cell</h2>
+    <h3>基础用法</h3>
+    <div class="ux-cell-group">
+      <div class="ux-cell">
+        <div class="ux-cell__title">
+          <span>单元格</span>
+        </div>
+        <div class="ux-cell__value">
+          <span>内容</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="ux-cell">
+      <div class="ux-cell__title">
+        <span>单元格</span>
+        <div class="ux-cell__label">描述信息</div>
+      </div>
+      <div class="ux-cell__value">
+        <span>内容</span>
+      </div>
+    </div>
+
+    <h3>单元格大小</h3>
+    <div class="ux-cell ux-cell--large">
+      <div class="ux-cell__title">
+        <span>单元格</span>
+      </div>
+      <div class="ux-cell__value">
+        <span>内容</span>
+      </div>
+    </div>
+
+    <div class="ux-cell ux-cell--large">
+      <div class="ux-cell__title">
+        <span>单元格</span>
+        <div class="ux-cell__label">描述信息</div>
+      </div>
+      <div class="ux-cell__value">
+        <span>内容</span>
+      </div>
+    </div>
+
+    <h3>只设置value</h3>
+    <div class="ux-cell">
+      <div class="ux-cell__value ux-cell__value--alone">
+        <span>内容</span>
+      </div>
+    </div>
+
+    <h3>分组标题</h3>
+    <div>
+      <div class="ux-cell-group__title">分组 1</div>
+      <div class="ux-cell-group van-hairline--top-bottom">
+        <div class="ux-cell">
+          <div class="ux-cell__title"><span>单元格</span></div>
+          <div class="ux-cell__value"><span>内容</span></div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="ux-cell-group__title">分组 2</div>
+      <div class="ux-cell-group ux-hairline--top-bottom">
+        <div class="ux-cell">
+          <div class="ux-cell__title"><span>单元格</span></div>
+          <div class="ux-cell__value"><span>内容</span></div>
+        </div>
+      </div>
+    </div>
+
+    <h3>垂直居中</h3>
+    <div class="ux-cell ux-cell--center">
+      <div class="ux-cell__title"><span>单元格</span>
+        <div class="ux-cell__label">描述信息</div>
+      </div>
+      <div class="ux-cell__value"><span>内容</span></div>
+    </div>
+
+  </div>
+
+
+  <h2>Button</h2>
+  <div class="demo-block">
+    <h3>base</h3>
+
+    <button class="ux-button">
+      <span>默认按钮</span>
+    </button>
+
+    <button class="ux-button ux-button--primary">
+      <span>主要按钮</span>
+    </button>
+
+    <button class="ux-button ux-button--danger">
+      <span>危险按钮</span>
+    </button>
+  </div>
+
+  <div class="demo-block">
+    <h3>size</h3>
+
+    <button class="ux-button ux-button--large">
+      <span>Primary</span>
+    </button>
+
+    <button class="ux-button ux-button--small">
+      <span>Primary</span>
+    </button>
+  </div>
+
+  <div class="demo-block">
+    <h3>icon</h3>
+
+    <button class="ux-button">
+      <i class="ux-icon-kefu"></i>
+      <span>客服</span>
+    </button>
+
+    <button class="ux-button">
+      <span>首页</span>
+      <i class="ux-icon-home ux-icon--right"></i>
+    </button>
+  </div>
+
+  <div class="demo-block">
+    <h3>状态</h3>
+
+    <button class="ux-button ux-button--large is-loading">
+      <i class="ux-icon-loading"></i>
+      <span>Loading</span>
+    </button>
+
+    <button class="ux-button ux-button--large is-disabled">
+      <span>Disabled</span>
+    </button>
+  </div>
+</body>
+
+</html>

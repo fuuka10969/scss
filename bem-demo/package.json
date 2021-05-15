@@ -1,0 +1,19 @@
+{
+  "name": "bem",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "serve": "parcel serve index.html"
+  },
+  "sass": {
+    "includePaths": [
+      "./node_modules"
+    ]
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5",
+    "sass": "^1.32.12",
+    "sass-bem": "^2.6.5"
+  },
+  "license": "MIT"
+}

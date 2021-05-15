@@ -1,0 +1,25 @@
+@import "sass-bem/bem";
+
+@import "../common/variables";
+
+body {
+  margin: 0;
+  background: #f5f5f5;
+}
+
+h3 {
+  margin: 10px;
+}
+
+@include component("block", "demo") {
+  @include component("button", $css-prefix) {
+    @include duo {
+      margin-left: 10px;
+    }
+  }
+  @include component("cell", $css-prefix) {
+    // @include duo {
+    //   margin-left: 10px;
+    // }
+  }
+}

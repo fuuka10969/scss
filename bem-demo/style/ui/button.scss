@@ -1,0 +1,81 @@
+@import "sass-bem/bem";
+
+@import "../common/variables";
+@import "../mixins/button";
+
+@include component("button", $css-prefix) {
+  display: inline-block;
+  margin: 0;
+  padding: 9px 15px;
+  cursor: pointer;
+
+  line-height: 1;
+
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  white-space: nowrap;
+  -webkit-appearance: none;
+
+  transition: 0.1s;
+  outline: none;
+
+  font-size: 12px;
+  font-weight: 500;
+
+  color: #606266;
+  background: #fff;
+  border: 1px solid #dcdfe6;
+  border-radius: 3px;
+  box-sizing: border-box;
+
+  @include hover {
+    color: #409eff;
+    border-color: #c6e2ff;
+    background-color: #ecf5ff;
+  }
+
+  @include active {
+    color: #3a8ee6;
+    border-color: #3a8ee6;
+    outline: none;
+  }
+
+  // 大尺寸
+  @include modifier("large") {
+    padding: 12px 20px;
+    font-size: 14px;
+    border-radius: 4px;
+  }
+
+  // 小尺寸
+  @include modifier("small") {
+    padding: 7px 15px;
+    font-size: 12px;
+    border-radius: 3px;
+  }
+
+  // 加载中
+  @include is("loading") {
+    position: relative;
+    pointer-events: none;
+  }
+
+  // 禁用
+  @include is("disabled") {
+    cursor: not-allowed;
+    color: #bcbec2;
+    background-color: #f4f4f5;
+    border-color: #e9e9eb;
+  }
+
+  // 主要的
+  @include modifier("primary") {
+    @include button-variant(#fff, $primary-color, $primary-color)
+  }
+
+  // 危险的
+  @include modifier("danger") {
+    @include button-variant(#fff,#f56c6c, #f56c6c)
+  }
+}

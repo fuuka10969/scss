@@ -1,0 +1,86 @@
+@import "sass-bem/bem";
+
+@import "../common/variables";
+
+@include component("cell", $css-prefix) {
+  position: relative;
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px 16px;
+  overflow: hidden;
+  color: #323233;
+  font-size: 14px;
+  line-height: 24px;
+  background-color: #fff;
+
+  @include after {
+    position: absolute;
+    box-sizing: border-box;
+    content: '';
+    pointer-events: none;
+    right: 16px;
+    bottom: 0;
+    left: 16px;
+    border-bottom: 1px solid #ebedf0;
+    transform: scaleY(0.5);
+  }
+
+  // 大尺寸
+  @include modifier("large") {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    @include element("title") {
+      font-size: 16px;
+    }
+    @include element("label") {
+      font-size: 14px;
+    }
+  }
+
+  // 垂直居中
+  @include modifier("center") {
+    align-items: center;
+  }
+
+  // 单元格、内容
+  @include element("title" "value") {
+    flex: 1;
+  }
+
+  // 单元格
+  @include element("title") {
+  }
+
+  // 描述信息
+  @include element("label") {
+    margin-top: 4px;
+    color: #969799;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  // 内容
+  @include element("value") {
+    position: relative;
+    overflow: hidden;
+    color: #969799;
+    text-align: right;
+    vertical-align: middle;
+    word-wrap: break-word;
+    @include modifier('alone') {
+      color: #323233;
+      text-align: left;
+    }
+  }
+}
+
+// 分组
+@include component("cell-group", $css-prefix) {
+  @include element("title") {
+    padding: 16px 16px 8px;
+    color: #969799;
+    font-size: 14px;
+    line-height: 16px;
+  }
+}

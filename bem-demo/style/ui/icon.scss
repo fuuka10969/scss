@@ -1,0 +1,42 @@
+@import "../common/variables";
+
+@font-face {
+  font-family: "iconfont"; /* Project id 600659 */
+  src: url('//at.alicdn.com/t/font_600659_qhyjn7s7qsg.woff2?t=1620461115120') format('woff2'),
+       url('//at.alicdn.com/t/font_600659_qhyjn7s7qsg.woff?t=1620461115120') format('woff'),
+       url('//at.alicdn.com/t/font_600659_qhyjn7s7qsg.ttf?t=1620461115120') format('truetype');
+}
+
+[class*="#{$css-prefix}-icon-"],
+[class^="#{$css-prefix}-icon-"] {
+  font-family: "iconfont" !important;
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  vertical-align: baseline;
+  display: inline-block;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.#{$css-prefix}-icon-home:before {
+  content: "\e6a8";
+}
+
+.#{$css-prefix}-icon-kefu:before {
+  content: "\e663";
+}
+
+.#{$css-prefix}-icon--right {
+  margin-left: 5px;
+}
+
+.#{$css-prefix}-icon-loading {
+  animation: rotating 750ms linear infinite;
+
+  &:before {
+    content: "\e61c";
+  }
+}
